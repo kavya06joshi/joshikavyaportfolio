@@ -1,0 +1,63 @@
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <link rel="stylesheet" href="experiencestyles.css">
+    <div class="experience-content">
+        <h2>Experience</h2>
+
+        <!-- Skills Button -->
+        <button id="skillsButton" class="skills-button">Skills</button>
+
+        <!-- Modal for Skills -->
+        <div id="skillsModal" class="skills-modal">
+            <div class="modal-content">
+                <span class="close-button" id="closeButton">&times;</span>
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Design</li>
+                    <li>Web Development</li>
+                    <!-- Add more skills as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Job Experience 1 -->
+        <div class="job-experience">
+            <h3>Web Developer | XYZ Company</h3>
+            <p class="job-date">June 2021 - Present</p>
+            <ul>
+                <li>Developed and maintained responsive websites using HTML, CSS, and JavaScript.</li>
+                <li>Collaborated with cross-functional teams to implement new features and improve user experience.</li>
+                <li>Resolved website issues, ensuring optimal functionality and performance.</li>
+            </ul>
+        </div>
+
+        <!-- Add more job experiences as needed -->
+
+    </div>
+</section>
+
+<!-- JavaScript code for the modal -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var skillsButton = document.getElementById("skillsButton");
+        var skillsModal = document.getElementById("skillsModal");
+        var closeButton = document.getElementById("closeButton");
+
+        skillsButton.addEventListener("click", function () {
+            skillsModal.style.display = "block";
+        });
+
+        closeButton.addEventListener("click", function () {
+            skillsModal.style.display = "none";
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target === skillsModal) {
+                skillsModal.style.display = "none";
+            }
+        });
+    });
+</script>
